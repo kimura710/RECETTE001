@@ -16,13 +16,14 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 
 
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	 @Bean
 	public BCryptPasswordEncoder passwordEncoder() {
-		// ç¹ä»£ã›ç¹ï½¯ç¹ï½¼ç¹å³¨?¿½?½®è­‰æ?œæ·è›¹ä¹Ÿç•‘
+		//»£ã›ç¹ï½¯ç¹ï½¼ç¹å³¨?¿½?½®è­‰æ?œæ·è›¹ä¹Ÿç•‘
 		return new BCryptPasswordEncoder();
 	}
 	
