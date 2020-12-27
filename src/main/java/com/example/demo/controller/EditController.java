@@ -15,12 +15,12 @@ import com.example.demo.domain.Menu;
 import com.example.demo.service.MenuService;
 
 @Controller
-@RequestMapping("/menus")
+@RequestMapping("/")
 public class EditController {
 	@Autowired
 	private MenuService service;
 	
-	@GetMapping("{id}/edit")
+	@GetMapping("/{id}/edit")
 	public String edit(@PathVariable int id,Model model) {
 		model.addAttribute("menu",service.search(id));
 		return "edit";
@@ -33,7 +33,7 @@ public class EditController {
 		}else {
 			menu.setId(id);
 			service.update(menu);
-			return "redirect:/menus/index";
+			return "redirect:/index";
 		}
 	
 	}

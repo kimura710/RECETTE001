@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	  @Override
 	  public void configure(WebSecurity web) throws Exception {
 	    web.ignoring().antMatchers("/js/**","/css/**","/resources/**");
-	    }
+	  }
 	 
 	 // ÁπùÔøΩÁπùÔΩºÁπß?ΩøÁπß?ΩΩÁπùÔΩºÁπß?Ωπ
 	 @Autowired
@@ -87,7 +87,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		    .usersByUsernameQuery(USER_SQL)
 		    .authoritiesByUsernameQuery(ROLE_SQL)
 		    .passwordEncoder(passwordEncoder());
+		
+		auth.inMemoryAuthentication()
+		    .withUser("user")
+		    .password("password")
+		    .roles("ADMIN");
+	
 	}
-	
-	
 }

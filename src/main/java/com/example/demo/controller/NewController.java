@@ -14,12 +14,12 @@ import com.example.demo.domain.Menu;
 import com.example.demo.service.MenuService;
 
 @Controller
-@RequestMapping("/menus")
+@RequestMapping("/")
 public class NewController {
 	@Autowired
 	private MenuService service;
 	
-	@GetMapping("new")
+	@GetMapping("/new")
 	public String newMenu(@ModelAttribute("menu") Menu menu) {
 		return "new";
 	}
@@ -29,7 +29,7 @@ public class NewController {
 			return "new";
 		}else {
 			service.save(menu);
-			return "redirect:/menus/index";
+			return "redirect:/index";
 		}
 	}
 

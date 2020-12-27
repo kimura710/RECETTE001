@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.service.MenuService;
 
 @Controller
-@RequestMapping("/menus")
+@RequestMapping("/")
 public class ShowController {
 	@Autowired
 	private MenuService service;
 
-	@GetMapping("{id}")
+	@GetMapping("/{id}")
 	public String show(@PathVariable int id,Model model) {
 		model.addAttribute("menu",service.search(id));
 		return "show";

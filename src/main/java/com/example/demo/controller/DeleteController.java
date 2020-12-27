@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.service.MenuService;
 
 @Controller
-@RequestMapping("/menus")
+@RequestMapping("/")
 public class DeleteController {
 	
 	@Autowired
@@ -19,7 +19,7 @@ public class DeleteController {
 	@PostMapping("/delete/{id}")
 	public String delete(@PathVariable int id,Model model) {
 		service.delete(id);
-		return "redirect:/menus/index";
+		return "redirect:/index";
 	}
 
 }

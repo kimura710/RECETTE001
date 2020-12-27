@@ -10,7 +10,7 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/menus/index">レシピ管理</a>
+				<a class="navbar-brand" href="/index">レシピ管理</a>
 			</div>
 		</div>
 	</nav>
@@ -21,7 +21,7 @@
 				<h5 class="card-title">メニュー新規登録</h5>
 			</div>
 			<div class="card-body">
-				<form th:method="post" th:action="@{/menus/{id}(id=*{id})}"
+				<form th:method="post" th:action="@{/{id}(id=*{id})}"
 					th:object="${menu}">
 					<div class="form-group ">
 						<label class="col-md-2 control-label text-muted">タイトル</label>

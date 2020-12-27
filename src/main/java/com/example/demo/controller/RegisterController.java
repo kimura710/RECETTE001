@@ -32,7 +32,7 @@ public class RegisterController {
 		
 		service.registerUser(user);
 		
-		return "login";
+		return "/login";
 	}
 
 }

@@ -10,7 +10,7 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/menus/index">レシピ管理</a>
+				<a class="navbar-brand" href="/index">レシピ管理</a>
 
 				<div class="pull-right">
 					<a th:href="@{/logout}">ログアウト</a>
@@ -23,7 +23,7 @@
 		<div class="card card-primary mb-3">
 			<div class="card-header">
 				<h5 class="card-title">
-					メニューリスト<a href="/menus/new" class="btn btn-success float-right">新規作成</a>
+					メニューリスト<a href="/new" class="btn btn-success float-right">新規作成</a>
 				</h5>
 			</div>
 			<table class="table table-striped" th:if="${menus.size()}">
@@ -41,10 +41,10 @@
 						<td th:text="*{name}"></td>
 						<td th:text="*{course}"></td>
 						<td class="float-right">
-							<form action="#" th:action="@{/menus/delete/{id}(id=*{id})}" th:method="post">
-								<a class="btn btn-primary" th:href="@{/menus/{id}(id=*{id})}">詳細</a>
+							<form action="#" th:action="@{/delete/{id}(id=*{id})}" th:method="post">
+								<a class="btn btn-primary" th:href="@{/{id}(id=*{id})}">詳細</a>
 								<a class="btn btn-primary"
-									th:href="@{/menus/{id}/edit(id=*{id})}">変更</a>
+									th:href="@{/{id}/edit(id=*{id})}">変更</a>
 								<button class="btn btn-primary" name="delete">削除</button>
 							</form>
 				</tbody>

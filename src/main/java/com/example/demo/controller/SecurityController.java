@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.service.MenuService;
 
 @Controller
-@RequestMapping("/menus")
+@RequestMapping("/")
 public class SecurityController {
 	@Autowired
 	private MenuService service;
