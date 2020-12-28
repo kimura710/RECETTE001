@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	 @Bean
 	public BCryptPasswordEncoder passwordEncoder() {
-		//»£ã›ç¹ï½¯ç¹ï½¼ç¹å³¨?¿½?½®è­‰æ?œæ·è›¹ä¹Ÿç•‘
+		
 		return new BCryptPasswordEncoder();
 	}
 	
@@ -32,11 +32,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	    web.ignoring().antMatchers("/js/**","/css/**","/resources/**");
 	  }
 	 
-	 // ç¹ï¿½ç¹ï½¼ç¹§?½¿ç¹§?½½ç¹ï½¼ç¹§?½¹
+	
 	 @Autowired
 	 private DataSource dataSource;
 	 
-	 // ç¹ï½¦ç¹ï½¼ç¹§?½¶IDç¸º?½¨ç¹ä»£ã›ç¹ï½¯ç¹ï½¼ç¹å³¨?½’èœ¿é–??½¾åŠ±â˜?ç¹§é¬¼QLè­?¿½
+	 
 	 private static final String USER_SQL = "SELECT"
 			 +" user_id,"
 			 +" password,"
@@ -62,7 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http
-		//éš±å´ï½¨?½¼ç¹ï½ªç¹§?½¯ç¹§?½¨ç¹§?½¹ç¹åŒ»?¿½?½®éšª?½­è³?¿½
+		
 		   .authorizeRequests()
 		   .antMatchers("/login","/register").permitAll()
 		   .anyRequest()
