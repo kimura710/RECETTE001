@@ -8,16 +8,16 @@ public class Menu {
 	@Id
 	private int id;
 	
-	@NotBlank(message = "タイトルを�?�力してください")
+	@NotBlank
 	private String name;
 	
-	@Size(max = 10, message = "�?字数オーバ�?�で�?")
+	@Size(max = 10)
 	private String course;
 	
-	@Size(max = 1000,message = "�?字数オーバ�?�で�?")
+	@Size(max = 1000)
 	private String recette;
 	
-	@Size(max = 1000,message = "�?字数オーバ�?�で�?")
+	@Size(max = 1000)
 	private String memo;
 
 	public int getId() {
