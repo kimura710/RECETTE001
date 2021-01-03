@@ -1,6 +1,7 @@
 package com.example.demo.controllerTest;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,11 +23,6 @@ public class EditControllerTest {
 	
 	@Autowired
 	private EditController target;
-	
-	@Before
-	
-	
-
 	
 	
 	
