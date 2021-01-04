@@ -1,4 +1,4 @@
-package com.example.demo.controllerTest;
+/*package com.example.demo.controllerTest;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,4 +26,4 @@ public class EditControllerTest {
 	
 	
 	
-}
+}*/
