@@ -19,6 +19,8 @@ public class Menu {
 	
 	@Size(max = 1000)
 	private String memo;
+	
+	private Boolean status;
 
 	public int getId() {
 		return id;
@@ -58,6 +60,14 @@ public class Menu {
 
 	public void setCourse(String course) {
 		this.course = course;
+	}
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+	public void setStatus(Boolean status) {
+		this.status = status;
 	}
 
 }

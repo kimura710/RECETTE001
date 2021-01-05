@@ -74,7 +74,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		   .failureUrl("/login?error")
 		   .usernameParameter("userId")
 		   .passwordParameter("password")
-		   .defaultSuccessUrl("/home",true)
+		   .defaultSuccessUrl("/index",true)
 		   .and()
 		.logout()
 		   .logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
